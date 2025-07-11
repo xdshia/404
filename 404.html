@@ -69,6 +69,14 @@
                     <path d="M20 120 C 80 140, 120 80, 180 110 S 250 160, 280 150" stroke-width="5" />
                     <path d="M40 280 C 100 240, 150 290, 200 250 S 250 200, 280 220" stroke-width="5" />
                     <path d="M180 20 C 160 80, 220 120, 190 180 S 130 240, 150 280" stroke-width="5" />
+
+                    <!-- The Broken Route -->
+                    <g stroke="#7E22CE" stroke-width="8" stroke-linecap="round">
+                        <!-- Start point of the route, now an X -->
+                        <path d="M40 40 L55 55 M55 40 L40 55" />
+                        <!-- The main path, dashed to show it's broken -->
+                        <path d="M62 62 C 80 80, 100 100, 115 115" stroke-dasharray="10 8" stroke-width="6"/>
+                    </g>
                 </g>
                 
                 <!-- Animated Location Pin -->
@@ -84,14 +92,17 @@
 
         <!-- Home Button in Persian -->
         <div class="mt-4">
-            <a href="https://addwin.ir" class="inline-block bg-purple-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+            <a href="/" class="inline-block bg-purple-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                 بازگشت به صفحه اصلی
             </a>
         </div>
 
     </div>
 
-    
+    <script>
+        // Set the current year in the footer
+        document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+    </script>
 
 </body>
 </html>
